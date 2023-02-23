@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    restart: always
+    ports:
+      - 7777:7777
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE : everytown
+      MYSQL_USER: everytown
+      MYSQL_PASSWORD: everytown
+      MYSQL_ROOT_PASSWORD: everytown

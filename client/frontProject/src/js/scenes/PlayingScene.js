@@ -740,11 +740,13 @@ export default class PlayingScene extends Phaser.Scene {
             this.resetCharacter()
             this.resetCharacterCount += 1
             this.startPostPosition += 1
+            this.m_player.nickname.text = this.m_player.name
         }
 
         if(this.startPostPosition !==0) {
             this.timerEvent(this.resources)
             this.getMarker()
+            this.m_player.nickname.setPosition(this.m_player.x-10, this.m_player.y-30)
         }
 
         console.log(this.m_player.x, this.m_player.y)

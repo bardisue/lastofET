@@ -19,12 +19,14 @@ export default class Ui extends Phaser.Physics.Arcade.Image {
 
 
       this.talk = scene.physics.add.sprite(0,0, "talk")
+        this.talk.scale =0.8
       this.talk.setPosition(scene.cameras.main.centerX,scene.cameras.main.centerY+220);
       this.talk.setScrollFactor(0,0);
       this.talk.setScale(3);
 
 
       this.button = scene.physics.add.sprite(0,0, "talk").setName("talkSprite");
+        this.button.scale =0.8
       this.button.setPosition(scene.cameras.main.centerX,scene.cameras.main.centerY+220);
       this.button.setInteractive({ useHandCursor: true });
       this.button.setScrollFactor(0,0);

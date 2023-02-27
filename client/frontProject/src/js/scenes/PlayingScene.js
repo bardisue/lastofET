@@ -163,7 +163,7 @@ export default class PlayingScene extends Phaser.Scene {
         })
         ***/
         this.buildingLayer = this.add.layer();
-        this.buildingLayer.add(this.m_structure)
+        this.buildingLayer.add(this.m_structure.setVisible(false))
         this.markerLayer = this.add.layer();
 
         this.playerLayer = this.add.layer();
@@ -731,6 +731,7 @@ export default class PlayingScene extends Phaser.Scene {
            // //console.log(this.m_token.text)
             this.m_ui.photoButton.setVisible(true)
             this.m_ui.button.setVisible(true)
+            this.m_structure.setVisible(true)
             this.getNickname(), {once: true}
             this.getNicknameCount +=1
         }
